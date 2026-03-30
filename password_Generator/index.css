@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Orbitron", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 20px;
+}
+
+.main {
+    background: rgba(20, 20, 25, 0.95);
+    padding: 50px 40px;
+    border: 2px solid #10b981;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    
+}
+
+h1 {
+    margin-bottom: 12px;
+    color: #f8fafc;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+#hs {
+    color: #10b981;
+    font-weight: 900;
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+}
+
+.main > p {
+    color: #cbd5e1;
+    font-size: 14px;
+    margin-bottom: 30px;
+    letter-spacing: 0.3px;
+}
+
+label {
+    display: block;
+    color: #e2e8f0;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border: 2px solid #10b981;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: rgba(15, 23, 42, 0.6);
+    color: #f1f5f9;
+    font-family: "Orbitron", sans-serif;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #34d399;
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+    background-color: rgba(15, 23, 42, 0.8);
+}
+
+button {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 13px 28px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 10px auto;
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.25);
+}
+
+.password-container {
+    background: rgba(5, 150, 105, 0.05);
+    border: 2px solid #10b981;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 30px 0 0 0;
+    display: none;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.password-container.show {
+    display: block;
+}
+
+#password {
+    color: #34d399;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    min-height: 40px;
+    word-break: break-all;
+    background: rgba(15, 23, 42, 0.4);
+    padding: 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+.password-container button {
+    margin: 0;
+    padding: 12px 24px;
+}
