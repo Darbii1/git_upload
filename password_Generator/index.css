@@ -154,3 +154,17 @@ button:active {
     margin: 0;
     padding: 12px 24px;
 }
+
+.watermark {
+    color: #10b981;
+    font-size: 11px;
+    opacity: 0.3;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.watermark:hover {
+    opacity: 0.6;
+}
