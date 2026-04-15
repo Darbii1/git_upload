@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid rgba(0, 255, 150, 0.3);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(0, 255, 150, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(0, 150, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.container {
+  background: linear-gradient(135deg, rgba(20, 20, 35, 0.95) 0%, rgba(30, 40, 60, 0.95) 100%);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 255, 150, 0.2);
+  padding: 50px 40px;
+  max-width: 500px;
+  width: 100%;
+  animation: slideIn 0.5s ease;
+  border: 2px solid rgba(0, 255, 150, 0.5);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+}
+
+h2 {
+  text-align: center;
+  color: #00ff96;
+  border-bottom: 2px solid #00ff96;
+  padding: 15px 0 20px 0;
+  margin-bottom: 40px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 10px rgba(0, 255, 150, 0.5);
+}
+
+button {
+  background-color: rgba(0, 255, 150, 0.1);
+  color: #00ff96;
+  padding: 14px 28px;
+  border: 2px solid #00ff96;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin: 12px 0;
+  box-shadow: 0 0 15px rgba(0, 255, 150, 0.3);
+}
+
+button:hover {
+  background-color: rgba(0, 255, 150, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(0, 255, 150, 0.6);
+  text-shadow: 0 0 10px rgba(0, 255, 150, 0.8);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+h1 {
+  color: #00ff96;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 10px rgba(0, 255, 150, 0.4);
+}
+
+#counter {
+  text-align: center;
+  font-size: 72px;
+  font-weight: 900;
+  color: #00ff96;
+  margin: 40px 0;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, rgba(0, 255, 150, 0.1) 0%, rgba(0, 150, 255, 0.1) 100%);
+  border-radius: 15px;
+  border: 2px solid #00ff96;
+  box-shadow: 0 0 20px rgba(0, 255, 150, 0.4);
+  text-shadow: 0 0 15px rgba(0, 255, 150, 0.6);
+}
+
+
+
+@media (max-width: 480px) {
+  .container {
+    padding: 30px 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  #counter {
+    font-size: 48px;
+    padding: 30px 15px;
+  }
+  
+  button {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+}
+
+.watermark {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: rgba(0, 255, 150, 0.7);
+  font-style: italic;
+  letter-spacing: 1px;
+  pointer-events: none;
+  font-weight: 500;
+  text-shadow: 0 0 10px rgba(0, 255, 150, 0.5);
+}
+
+.watermark:hover {
+    opacity: 0.2;
+}
