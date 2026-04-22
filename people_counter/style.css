@@ -74,7 +74,7 @@ h2 {
 }
 
 button {
-  background-color: rgba(0, 255, 150, 0.1);
+  background-color: rgba(76, 0, 255, 0.1);
   color: #00ff96;
   padding: 14px 28px;
   border: 2px solid #00ff96;
@@ -86,6 +86,11 @@ button {
   width: 100%;
   margin: 12px 0;
   box-shadow: 0 0 15px rgba(0, 255, 150, 0.3);
+}
+
+#save-btn {
+  background-color: rgba(5, 214, 127, 0.1);
+  border-color: #0dec8f;
 }
 
 button:hover {
