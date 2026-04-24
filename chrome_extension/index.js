@@ -1,18 +1,32 @@
-let myLeads = ["www.awesomelead.com", "window.com", "window.img"]
-const inputEl = document.getElementById("input-el")
-const inputBtn = document.getElementById("input-btn")
-let generate = document.getElementById("generate")
-const ulEl = document.getElementById("ul-el")
+let myLeads = [];
+const inputEl = document.getElementById("input-el");
+const generateBtn = document.getElementById("generate");
+const ulEl = document.getElementById("ul-el");
 
-generate.addEventListener("click", function(){
-    myLeads.push(inputEl.value)
-    console.log(myLeads)
+generateBtn.addEventListener("click", function(){
+        console.log("Button clicked!");
+        myLeads.push(inputEl.value);
+      inputEl.value = "";  
+    console.log(myLeads);
+
+    renderLeads()
     
-})
+});
 
-
-for (let i = 0; i < myLeads.length; i++) {
-  
-    ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"
-    
+function renderLeads() {
+    let listItems = "";
+    for(let i = 0; i < myLeads.length; i++){
+      listItems += `
+       <li>
+         <a target='_blank' href='${myLeads[i]}'>
+           ${myLeads[i]}
+         </a>
+      </li>
+    `;  
+   }
+   console.log(listItems);
+   
+    ulEl.innerHTML = listItems;
 }
+
+
