@@ -5,6 +5,7 @@
      "description": "A simple Chrome extension",
 
     "action": {
-        "default_popup": "index.html"    
+        "default_popup": "index.html",
+        "default_icon": "cast.png"    
     }
 }
