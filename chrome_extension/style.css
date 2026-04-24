@@ -2,6 +2,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 20px;
+    min-width: 400px;
 }
 
 input {
@@ -58,11 +59,24 @@ button:active {
 
 
 #ul-el {
-  
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
     color: #333;
     font-size: 14px;
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+a{
+    color: #5f9341;
+}
+a:hover{
+    color: #10b981;
+}
+
+li{
+    margin-top: 3px;
 }
 

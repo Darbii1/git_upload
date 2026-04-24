@@ -1,0 +1,10 @@
+{
+     "manifest_version": 3,
+    "version": "1.0",
+     "name": "Darbii Extension",
+     "description": "A simple Chrome extension",
+
+    "action": {
+        "default_popup": "index.html"    
+    }
+}
