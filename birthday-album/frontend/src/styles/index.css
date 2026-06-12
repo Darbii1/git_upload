@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1f2937 0%, #374151 50%, #0f766e 100%);
+  color: #1f2937;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
