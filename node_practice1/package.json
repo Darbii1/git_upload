@@ -1,0 +1,12 @@
+{
+  "name": "node_practice1",
+  "version": "1.0.0",
+  "description": "platform for sharing ghostly encounters",
+  "license": "ISC",
+  "author": "Darbii_dev",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

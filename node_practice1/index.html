@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>September15 Enterprise - Premium Clothing Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo-container">
+                <img src="images/img1.jpeg" alt="Sep15adire Logo" class="logo">
+            </div>
+            <div class="brand-copy">
+                <h1>September15 Enterprise</h1>
+                <p>Adire and Kampala Clothing Collection</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="admin-toolbar">
+        <button id="admin-access-btn" class="admin-cta">Admin add product</button>
+        <div id="admin-message" class="admin-warning" aria-live="polite"></div>
+    </section>
+
+    <section id="admin-panel" class="admin-panel" aria-hidden="true">
+        <div class="admin-panel-card">
+            <h2>Admin product editor</h2>
+            <p>Only approved admin access can add a new image, pricing, and product info.</p>
+            <form id="admin-form">
+                <div class="form-row">
+                    <label for="product-name">Product name</label>
+                    <input id="product-name" type="text" placeholder="Enter product title" required>
+                </div>
+                <div class="form-row">
+                    <label for="product-description">Description</label>
+                    <textarea id="product-description" rows="3" placeholder="Enter product details" required></textarea>
+                </div>
+                <div class="form-row">
+                    <label for="product-price">Price</label>
+                    <input id="product-price" type="text" placeholder="$00" required>
+                </div>
+                <div class="form-row">
+                    <label for="product-image-url">Image URL</label>
+                    <input id="product-image-url" type="url" placeholder="https://example.com/image.jpg">
+                </div>
+                <div class="form-row">
+                    <label for="product-image-file">Or choose image file</label>
+                    <input id="product-image-file" type="file" accept="image/*">
+                </div>
+                <button type="submit" class="admin-submit">Add product</button>
+                <div class="admin-note">If you are not the admin, click the button to request approval.</div>
+            </form>
+        </div>
+    </section>
+
+    <section class="product-gallery">
+        <div class="product-item">
+            <div class="product-image">
+                <img src="images/adire1.jpeg" alt="Adire Top">
+            </div>
+            <h2>Adire Top</h2>
+            <p>Exquisite hand-dyed comfort. Experience authentic African elegance.</p>
+            <div class="product-price">$25</div>
+        </div>
+        <div class="product-item">
+            <div class="product-image">
+                <img src="images/adire2.jpeg" alt="Kampala Skirt">
+            </div>
+            <h2>Kampala Skirt</h2>
+            <p>Traditional vibrant prints. Perfect for any occasion.</p>
+            <div class="product-price">$30</div>
+        </div>
+        <div class="product-item">
+            <div class="product-image">
+                <img src="images/adire3.jpeg" alt="Adire Dress">
+            </div>
+            <h2>Adire Dress</h2>
+            <p>Stylish and colorful. Make a statement with this masterpiece.</p>
+            <div class="product-price">$45</div>
+        </div>
+        <div class="product-item">
+            <div class="product-image">
+                <img src="images/adire4.jpeg" alt="Kampala Jacket">
+            </div>
+            <h2>Kampala Jacket.</h2>
+            <p>Bold patterns and premium quality. Elevate your wardrobe.</p>
+            <div class="product-price">$50</div>
+        </div>
+    </section>
+
+    <div class="watermark">~ Darbii_dev © 2024</div>
+</body>
+<script src="index.js"></script>
+</html>
