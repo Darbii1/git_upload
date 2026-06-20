@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Access Request - September15 Enterprise</title>
+    <link rel="stylesheet" href="../style.css">
+    <meta name="robots" content="noindex">
+    <style>
+        /* Minimal critical styles to avoid flash; full styles are in style.css */
+        .admin-card{opacity:0;transition:opacity .25s ease-in-out}
+        .admin-card.visible{opacity:1}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="brand-copy">
+                <h1>Admin Portal</h1>
+                <p>September15 Enterprise - Product Management</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="admin-request">
+            <div class="admin-card" id="admin-card">
+                <h2>Request Admin Access</h2>
+
+                <div class="admin-info">
+                    <p><strong>⚠️ Info:</strong> You are attempting to access admin-only features. This request will be sent to the administrator for approval.</p>
+                </div>
+
+                <h3>How it works:</h3>
+                <ol>
+                    <li><strong>Submit Request:</strong> Fill out the form below with your details and reason for needing admin access.</li>
+                    <li><strong>Admin Review:</strong> The store owner will receive your request and review it.</li>
+                    <li><strong>Approval Notification:</strong> You'll be notified once your request is accepted or denied.</li>
+                    <li><strong>Gain Access:</strong> Once approved, you can log in with your credentials to manage products.</li>
+                </ol>
+
+                <h3>What admin access allows:</h3>
+                <ul class="admin-features">
+                    <li>Upload and manage product images</li>
+                    <li>Set and update product pricing</li>
+                    <li>Add product descriptions and details</li>
+                    <li>Remove or edit existing products</li>
+                </ul>
+
+                <form id="admin-request-form" class="admin-form">
+                    <div class="form-row">
+                        <label for="full-name">Full Name *</label>
+                        <input id="full-name" name="fullName" type="text" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email Address *</label>
+                        <input id="email" name="email" type="email" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="reason">Reason for Admin Access *</label>
+                        <textarea id="reason" name="reason" rows="4" placeholder="Tell us why you need admin access..." required></textarea>
+                    </div>
+                    <button type="submit" class="admin-submit">Submit Request</button>
+                </form>
+
+                <div class="admin-note">After submission you'll receive confirmation; the admin will review within 1-2 business days.</div>
+                <div class="admin-back"><a href="../index.html">← Back to store</a></div>
+            </div>
+        </section>
+    </main>
+
+    <div class="watermark">~ Darbii_dev © 2024</div>
+
+    <script>
+        // Simple client-side behavior: show card with fade
+        document.addEventListener('DOMContentLoaded', () => {
+            const card = document.getElementById('admin-card');
+            if (card) setTimeout(() => card.classList.add('visible'), 40);
+
+            const form = document.getElementById('admin-request-form');
+            if (!form) return;
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const fullName = document.getElementById('full-name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const reason = document.getElementById('reason').value.trim();
+
+                if (!fullName || !email || !reason) {
+                    alert('Please complete all fields before submitting.');
+                    return;
+                }
+
+                // For now we just acknowledge the request client-side
+                alert('Request submitted!\n\nName: ' + fullName + '\nEmail: ' + email + '\n\nThe admin will review your request and contact you at: ' + email);
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>
