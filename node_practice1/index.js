@@ -58,6 +58,7 @@ const ADMIN_SECRET = 'Darbii';
 const ADMIN_STORAGE_KEY = 'sep15Admin';
 const ADMIN_TIMESTAMP_KEY = 'sep15AdminTimestamp';
 const ADMIN_EXPIRY_MS = 60 * 60 * 1000;
+const ADMIN_CONTACT_EMAIL = 'nwachitwins@gmail.com' ;
 
 function getAdminTimestamp() {
     const value = localStorage.getItem(ADMIN_TIMESTAMP_KEY);
@@ -112,8 +113,18 @@ function clearAdminMessage() {
     adminMessage.classList.remove('visible');
 }
 
+function displayAdminRequestLink(message) {
+    if (!adminMessage) return;
+    const subject = encodeURIComponent('Admin Access Request');
+    const body = encodeURIComponent('Hello, I would like to request admin access to add a product. Please provide the admin key or instructions.');
+    const mailto = `mailto:${ADMIN_CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    adminMessage.innerHTML = `${message}. <a href="${mailto}" target="_blank" rel="noopener">Request access via email</a>`;
+    adminMessage.classList.add('visible');
+}
+
 if (adminButton) {
     adminButton.addEventListener('click', () => {
+        isAdmin = adminAccessValid();
         if (isAdmin) {
             showAdminPanel(!adminPanel.classList.contains('visible'));
             clearAdminMessage();
@@ -131,7 +142,7 @@ if (adminButton) {
 
         isAdmin = false;
         clearAdminStorage();
-        displayAdminMessage('Admin access is required to add products');
+        displayAdminRequestLink('Admin access is required to add products');
     });
 }
 
@@ -139,8 +150,9 @@ if (adminForm) {
     adminForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
+        isAdmin = adminAccessValid();
         if (!isAdmin) {
-            displayAdminMessage('Admin access is required to add products');
+            displayAdminRequestLink('Admin access is required to add products');
             return;
         }
 
