@@ -1,0 +1,749 @@
+/* ==========================================================================
+   REAPHIL NATURAL NUTRIGRAIN — design tokens
+   Palette grows out of the product itself: milled grain browns, a stone-
+   ground gold, and a deep bush-honey/forest green for the "natural" mark.
+   ========================================================================== */
+:root {
+    --max-width: 1200px;
+
+    /* core palette */
+    --ink: #241a13;
+    /* near-black bran brown, headings */
+    --ink-soft: #4a3c30;
+    /* softened body-on-light text */
+    --accent: #b6792a;
+    /* stone-ground gold */
+    --accent-light: #e6a758;
+    --accent-deep: #8f5c1c;
+    --forest: #3f5233;
+    /* bush-honey green, natural mark */
+    --forest-light: #6b8259;
+    --muted: #776a5c;
+    --muted-2: #8a7d6e;
+    --bg: #fffaf6;
+    --card: #fffdfa;
+    --line: rgba(36, 26, 19, 0.09);
+
+    /* elevation */
+    --shadow-sm: 0 2px 8px rgba(36, 26, 19, 0.06);
+    --shadow-md: 0 14px 32px rgba(36, 26, 19, 0.12);
+    --shadow-lg: 0 28px 60px rgba(36, 26, 19, 0.20);
+    --shadow-gold: 0 10px 26px rgba(182, 121, 42, 0.28);
+
+    /* shape + rhythm */
+    --radius-sm: 8px;
+    --radius: 16px;
+    --radius-lg: 22px;
+    --gap: 1.5rem;
+
+    /* type scale */
+    --step-0: clamp(1rem, 0.95rem + 0.2vw, 1.05rem);
+    --step-1: clamp(1.15rem, 1.05rem + 0.4vw, 1.3rem);
+    --step-2: clamp(1.5rem, 1.3rem + 0.8vw, 1.9rem);
+    --step-3: clamp(2rem, 1.6rem + 1.6vw, 2.9rem);
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: "Montserrat", Inter, system-ui, Arial, sans-serif;
+    font-weight: 400;
+    margin: 0;
+    color: var(--ink-soft);
+    background: url('images/img2.png') center/cover fixed no-repeat, var(--bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: var(--step-0);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem 1.25rem
+}
+
+.page {
+    background: transparent;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+    border: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Fraunces", "Georgia", serif;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    margin: 0;
+}
+
+/* ==========================================================================
+   NAV
+   ========================================================================== */
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: rgba(255, 250, 246, 0.78);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid var(--line);
+    transition: box-shadow .25s ease, background .25s ease;
+}
+
+.nav.scrolled {
+    background: rgba(255, 250, 246, 0.94);
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: .65rem;
+    padding-bottom: .65rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+}
+
+.logo {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--accent-light);
+    box-shadow: var(--shadow-sm);
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: .01em;
+}
+
+.tag {
+    color: var(--muted);
+    font-size: .8rem;
+    margin: .15rem 0 0;
+    letter-spacing: .01em;
+}
+
+.top-links {
+    display: flex;
+    align-items: center;
+}
+
+.top-links a {
+    margin-left: .35rem;
+    padding: .5rem .9rem;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: .88rem;
+    font-weight: 600;
+    letter-spacing: .01em;
+    transition: background .16s ease, color .16s ease;
+}
+
+.top-links a:hover {
+    background: var(--forest);
+    color: #fff;
+}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+.hero {
+    position: relative;
+    padding: 3.5rem 0 2.5rem;
+}
+
+.hero-inner {
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.hero-right {
+    flex: 1;
+    max-width: 720px;
+    background: rgba(255, 253, 250, 0.86);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem 2.5rem;
+    box-shadow: var(--shadow-md);
+}
+
+.hero-right::before {
+    content: "Est. Lagos \2022 Farm-Milled \2022 Stone-Free";
+    display: inline-block;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--forest);
+    background: rgba(63, 82, 51, 0.08);
+    border: 1px solid rgba(63, 82, 51, 0.22);
+    padding: .4rem .8rem;
+    border-radius: 999px;
+    margin-bottom: 1.1rem;
+}
+
+.hero-right h2 {
+    font-size: var(--step-3);
+    font-weight: 600;
+    margin: 0 0 .65rem;
+}
+
+.lead {
+    color: var(--muted);
+    margin: 0 0 1.4rem;
+    font-size: var(--step-1);
+    max-width: 46ch;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.features li {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: .82rem;
+    font-weight: 600;
+    background: #fff;
+    border: 1px solid var(--line);
+    padding: .45rem .8rem;
+    border-radius: 999px;
+    box-shadow: var(--shadow-sm);
+}
+
+.cta-row {
+    display: flex;
+    gap: .85rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: .8rem 1.5rem;
+    border-radius: 999px;
+    border: 1.5px solid var(--ink);
+    background: transparent;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .92rem;
+    letter-spacing: .01em;
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease;
+}
+
+.btn:hover {
+    background: var(--ink);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    border: none;
+    color: #fff;
+    box-shadow: var(--shadow-gold);
+}
+
+.btn.primary:hover {
+    transform: translateY(-3px) scale(1.015);
+    box-shadow: 0 20px 40px rgba(182, 121, 42, 0.34);
+    color: #fff;
+}
+
+/* ==========================================================================
+   SECTION HEADINGS
+   ========================================================================== */
+.products h2,
+.reviews h2,
+.about h2,
+.contact h2 {
+    margin-top: 1.5rem;
+    font-size: var(--step-2);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: .6rem;
+}
+
+.products h2::after,
+.reviews h2::after,
+.about h2::after,
+.contact h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 54px;
+    height: 3px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--forest-light));
+}
+
+.muted {
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   PRODUCT GRID
+   ========================================================================== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+}
+
+.card {
+    background: var(--card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--line);
+    transition: transform .3s cubic-bezier(.2, .8, .2, 1), box-shadow .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.06);
+}
+
+.card-body {
+    padding: 1.25rem 1.3rem 1.4rem;
+    position: relative;
+}
+
+.card-body h3 {
+    font-size: 1.12rem;
+    font-weight: 600;
+    margin: 0 0 .55rem;
+}
+
+.sales {
+    display: inline-block;
+    font-weight: 700;
+    font-size: .82rem;
+    letter-spacing: .01em;
+    color: var(--accent-deep);
+    background: rgba(182, 121, 42, 0.10);
+    border: 1px solid rgba(182, 121, 42, 0.22);
+    padding: .3rem .65rem;
+    border-radius: var(--radius-sm);
+    margin-bottom: .7rem;
+}
+
+.card-body p {
+    margin: 0;
+    font-size: .88rem;
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+.card.appear {
+    opacity: 0;
+    transform: translateY(16px);
+}
+
+.card.appear.visible {
+    opacity: 1;
+    transform: none;
+    transition: all .55s cubic-bezier(.2, .9, .2, 1);
+}
+
+/* ==========================================================================
+   REVIEWS
+   ========================================================================== */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    align-items: stretch;
+}
+
+.review-card {
+    background: var(--card);
+    padding: 1.3rem 1.4rem;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+}
+
+.review-card::before {
+    content: "\201C";
+    font-family: "Fraunces", serif;
+    position: absolute;
+    top: .1rem;
+    right: 1rem;
+    font-size: 2.6rem;
+    color: rgba(182, 121, 42, 0.16);
+    line-height: 1;
+}
+
+.review-card img {
+    display: none
+}
+
+.stars-display .star {
+    font-size: 15px;
+    margin-left: .2rem;
+    color: var(--accent);
+}
+
+.review-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+    font-size: .92rem;
+}
+
+.review-form {
+    margin-top: 1.75rem;
+    background: var(--card);
+    padding: 1.75rem 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--line);
+    max-width: 640px;
+}
+
+.review-form h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: .25rem;
+}
+
+.review-form label {
+    display: block;
+    margin: 1rem 0 .35rem;
+    font-weight: 600;
+    font-size: .85rem;
+    color: var(--ink-soft);
+    letter-spacing: .01em;
+}
+
+.review-form input,
+.review-form textarea {
+    width: 100%;
+    padding: .75rem .9rem;
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: .92rem;
+    background: #fff;
+    transition: border-color .16s ease, box-shadow .16s ease;
+}
+
+.review-form input:focus,
+.review-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(182, 121, 42, 0.15);
+}
+
+.review-form .form-actions {
+    margin-top: 1.1rem;
+}
+
+.stars {
+    display: inline-flex;
+    gap: .3rem;
+}
+
+.stars .star {
+    font-size: 22px;
+    color: #ddd3c6;
+    cursor: pointer;
+    transition: color .12s, transform .12s;
+}
+
+.stars .star:hover {
+    transform: scale(1.15);
+}
+
+.stars .star.filled {
+    color: var(--accent);
+}
+
+/* ==========================================================================
+   ABOUT
+   ========================================================================== */
+.about {
+    display: grid;
+    gap: var(--gap);
+}
+
+.about p {
+    margin: 0;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    box-shadow: var(--shadow-sm);
+    font-size: .95rem;
+}
+
+.about p strong {
+    display: block;
+    font-family: "Fraunces", serif;
+    color: var(--forest);
+    font-size: 1.02rem;
+    margin-bottom: .3rem;
+}
+
+.nafdac {
+    background: linear-gradient(135deg, rgba(63, 82, 51, 0.06), rgba(182, 121, 42, 0.06));
+    padding: 1.3rem 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid rgba(63, 82, 51, 0.18);
+    box-shadow: none;
+}
+
+.nafdac h4 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: .82rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--forest);
+    margin-bottom: .5rem;
+}
+
+.nafdac p {
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    font-size: .88rem;
+    color: var(--muted);
+}
+
+/* ==========================================================================
+   CONTACT
+   ========================================================================== */
+.contact-grid {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.contact-grid > div:first-child p {
+    margin: .55rem 0;
+    font-size: .92rem;
+}
+
+.contact-grid a {
+    color: var(--ink);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color .15s ease, color .15s ease;
+}
+
+.contact-grid > div:first-child a:hover {
+    border-color: var(--accent);
+    color: var(--accent-deep);
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: .65rem;
+}
+
+.socials a {
+    display: inline-flex;
+    align-items: center;
+    gap: .65rem;
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 600;
+    font-size: .9rem;
+    padding: .5rem .9rem;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+.socials a:hover {
+    transform: translateX(4px);
+    box-shadow: var(--shadow-sm);
+    border-color: var(--accent);
+}
+
+.contact-grid img {
+    width: 22px;
+    height: 22px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.site-footer {
+    background: var(--ink);
+    color: #f1e9de;
+    padding: 1.6rem 0;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.site-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--forest-light), var(--accent));
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: .85rem;
+    opacity: .9;
+}
+
+/* ==========================================================================
+   ENTRANCE ANIMATION
+   ========================================================================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity .6s ease, transform .6s cubic-bezier(.2, .9, .2, 1);
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: none;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media(max-width:900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-inner {
+        flex-direction: column;
+    }
+
+    .hero-right {
+        padding: 1.75rem;
+    }
+
+    .contact-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+@media(max-width:600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .6rem;
+    }
+
+    .top-links {
+        gap: .25rem;
+        flex-wrap: wrap;
+    }
+
+    .hero-right h2 {
+        font-size: 1.7rem;
+    }
+
+    .hero-right {
+        padding: 1.4rem;
+    }
+
+    .brand h1 {
+        font-size: 1rem;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+    }
+}
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}

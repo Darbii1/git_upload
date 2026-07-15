@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REAPHIL NATURAL NUTRIGRAIN LTD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="page">
+        <header class="nav">
+            <div class="container nav-inner">
+                <div class="brand">
+                    <img src="images/logo.jpeg" alt="REAPHIL logo" class="logo" />
+                    <div>
+                        <h1>REAPHIL NATURAL NUTRIGRAIN LTD</h1>
+                        <p class="tag">Processing & Packaging of Grains Flour, Healthy food and Original Honey</p>
+                    </div>
+                </div>
+                <nav class="top-links">
+                    <a href="#products">Products</a>
+                    <a href="#reviews">Reviews</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="container hero-inner">
+                
+                <div class="hero-right fade-in">
+                    <h2>Natural. Nutritious. Trusted.</h2>
+                    <p class="lead">To Produce and Distribute Nutritious, Affordable, High-quality, Natural Food
+                        products
+                        using ethical sourcing and hygienic processing.</p>
+                    <ul class="features">
+                        <li>✔ Stone-free guarantee</li>
+                        <li>✔ Fine smooth texture</li>
+                        <li>✔ No preservatives</li>
+                        <li>✔ Hygienically processed</li>
+                        <li>✔ Air-tight packaging</li>
+                        <li>✔ NAFDAC compliance (local)</li>
+                    </ul>
+                    <div class="cta-row">
+                        <a class="btn primary" href="#products">Shop Products</a>
+                        <a class="btn" href="#contact">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <main class="container">
+            <section id="products" class="products">
+                <h2>Products</h2>
+                <p class="muted">The higher the quantity ordered, the lesser the price.</p>
+
+                <div class="grid">
+                    <!-- Beans Flour -->
+                    <article class="card">
+                        <img src="images/bean.jpeg" alt="Beans Flour" />
+                        <div class="card-body">
+                            <h3>Beans Flour</h3>
+                            <div class="sales">1 Kg - ₦5,000 • 400g - ₦2,000</div>
+                            <p>An hygienic blend of neatly picked, dehauled and blended Brown Beans. Naturally pure
+                                beans
+                                flour, no mixture, and no preservatives.</p>
+                        </div>
+                    </article>
+
+                    <!-- Plantain Flour -->
+                    <article class="card">
+                        <img src="images/plantain.jpeg" alt="Plantain Flour" />
+                        <div class="card-body">
+                            <h3>Plantain Flour</h3>
+                            <div class="sales">1 Kg - ₦5,000</div>
+                            <p>Pure Unripe Plantain Flour. Undiluted and unmixed. No preservatives and no additives.
+                                100%
+                                pure healthy meal.</p>
+                        </div>
+                    </article>
+
+                    <!-- Gingered Pap -->
+                    <article class="card">
+                        <img src="images/pap.jpeg" alt="Gingered Pap" />
+                        <div class="card-body">
+                            <h3>Dried Gingered Pap</h3>
+                            <div class="sales">1 Kg - ₦6,000 • 500g - ₦3,000 • 250g - ₦1,500</div>
+                            <p>Spicy Gingered Pap made from healthy grains: Red Guinea Corn, Yellow Corn, Millet, Ginger
+                                and
+                                Dates. Available fresh and dried.</p>
+                        </div>
+                    </article>
+
+                    <!-- Ofada Rice -->
+                    <article class="card">
+                        <img src="images/ofada.jpeg" alt="Ofada Rice" />
+                        <div class="card-body">
+                            <h3>Ofada Rice</h3>
+                            <div class="sales">1 Kg - ₦4,000 • 500g - ₦2,000</div>
+                            <p>Locally sourced Brown Rice, de-stoned and free of dirt. Ready to eat.</p>
+                        </div>
+                    </article>
+
+                    <!-- Yam Flour -->
+                    <article class="card">
+                        <img src="images/yam.jpeg" alt="Yam Flour" />
+                        <div class="card-body">
+                            <h3>Yam Flour (Elubo Egbodo)</h3>
+                            <div class="sales">1 Kg - ₦5,000</div>
+                            <p>Pure, unmixed and undiluted Dried Yam. Free of mixture or dilution — the purest form of
+                                yam
+                                flour.</p>
+                        </div>
+                    </article>
+
+                    <!-- Original Honey -->
+                    <article class="card">
+                        <img src="images/honey.jpeg" alt="Original Honey" />
+                        <div class="card-body">
+                            <h3>Original Honey</h3>
+                            <div class="sales">1 Ltr - ₦10,000 • 500 ml - ₦5,000 • 250 ml - ₦2,500</div>
+                            <p>Locally sourced Bush Honey. Pureness and originality guaranteed — tested and trusted
+                                original
+                                honey.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="reviews" class="reviews">
+                <h2>Customer Reviews</h2>
+                <div id="reviews-list" class="reviews-grid"></div>
+
+                <div class="review-form">
+                    <h3>Leave a review</h3>
+                    <form id="reviewForm">
+                        <label for="reviewer">Name</label>
+                        <input id="reviewer" name="reviewer" placeholder="Your name" required />
+
+                        <label>Rating</label>
+                        <div id="rating" class="stars" aria-label="rating">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+
+                        <label for="message">Your review</label>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Write what you loved about the product" required></textarea>
+
+                        <div class="form-actions">
+                            <button class="btn primary" type="submit">Submit review</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section id="about" class="about">
+                <h2>About REAPHIL</h2>
+                <p><strong>Mission:</strong> To produce and distribute nutritious, affordable, high-quality natural food
+                    products using ethical sourcing, hygienic processing and delightful customer service.</p>
+                <p><strong>Vision:</strong> To become a globally recognized brand for products that enhance healthy
+                    lives
+                    and promote wellness, reducing consumption of unhygienic food in every home.</p>
+                <div class="nafdac">
+                    <h4>NAFDAC / Compliance</h4>
+                    <p>NAFDAC compliance (local). Products are processed hygienically, packaged airtight, and prepared
+                        for
+                        local distribution and export. (See label and certificate imagery in the images folder.)</p>
+                </div>
+            </section>
+
+            <section id="contact" class="contact">
+                <h2>Contact & Location</h2>
+                <div class="contact-grid">
+                    <div>
+                        <p><strong>Email:</strong> <a
+                                href="mailto:reaphilnaturalfood@gmail.com">reaphilnaturalfood@gmail.com</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:+2349066534929">09066534929</a>, <a
+                                href="tel:+2348058363697">08058363697</a></p>
+                        <p><strong>Address:</strong> Plot 819, Block 34, Kola Olaogun Street, Harmony Estate, Aboru,
+                            Iyana
+                            Ipaja, Lagos, Nigeria.</p>
+                    </div>
+                    <div class="socials">
+                        <a href="https://www.instagram.com/homedelight.flourfood?igsh=dWV5aDJ4aDN5MnMw"
+                            target="_blank"><img src="images/general.jpeg" alt="instagram" /> Instagram</a>
+                        <a href="https://www.facebook.com/share/1DjAu3gMu3/" target="_blank"><img
+                                src="images/facebook.png" alt="facebook" /> Facebook</a>
+                        <a href="https://tiktok.com/@homedelight.naturals" target="_blank"><img
+                                src="images/general.jpeg" alt="tiktok" /> TikTok</a>
+                        <a href="https://wa.me/2349066534929" target="_blank"><img src="images/whatsapp.png"
+                                alt="whatsapp" /> WhatsApp</a>
+                        <a href="mailto:reaphilnaturalfood@gmail.com" target="_blank"><img src="images/email.jpg"
+                                alt="email" /> Email</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <div>© REAPHIL NATURAL NUTRIGRAIN LTD</div>
+                <div>Plot 819, Block 34, Kola Olaogun Street, Harmony Estate, Aboru, Iyana Ipaja, Lagos, Nigeria</div>
+            </div>
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
